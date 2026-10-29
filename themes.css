@@ -1,0 +1,278 @@
+/* ============================================================================
+   themes.css — the palettes the editor can wear besides its own.
+
+   Each theme is a palette like the first block of styles.css, under a
+   data-theme attribute: on <html> for the theme you are wearing, on a sample
+   in the theme menu for each of the others. Studio, the default, is the one
+   in styles.css and has no block here. Everything that styles.css derives —
+   hover fills, the selection, the preview stage, the inspect colour — is
+   worked out again from whichever palette is in force.
+
+   These blocks have the same specificity as :root, and win over Studio only
+   because this file is linked after styles.css. Keep it that way.
+
+   A theme here also needs a line in src/themes.js, which is what puts its
+   name in the menu.
+
+   Light themes keep the accent a shade darker than the button fill, so text
+   in the accent colour reads on white and a hovered button darkens.
+   ========================================================================== */
+
+/* ── light ────────────────────────────────────────────────────────────── */
+
+[data-theme="paper"] {
+  color-scheme: light;
+  --bg: #ffffff;  --bg-2: #f5f4f0;  --bg-3: #e9e7e1;  --panel: #faf9f6;
+  --edge: #d9d6ce;  --edge-soft: #e6e3dc;
+  --ink: #1d2027;  --ink-dim: #4f5663;  --ink-faint: #7c838f;
+  --accent: #1d56c4;  --accent-dim: #2a6ae0;  --on-accent: #ffffff;
+  --good: #18855a;  --warn: #a86f00;  --bad: #cf3440;
+  --shadow: rgba(28, 32, 40, .16);  --backdrop: rgba(28, 32, 40, .3);
+  --select: color-mix(in srgb, var(--accent) 22%, transparent);
+
+  --tag: #1f5fbf;  --attr: #8a3fc9;  --string: #2f7d32;  --number: #b4560f;
+  --keyword: #c2286f;  --comment: #858b95;  --punct: #6b7280;
+  --prop: #0f7a84;  --value: #76600a;  --selector: #985a00;
+  --fn: #2a5db0;  --type: #0e7c66;
+}
+
+[data-theme="linen"] {
+  color-scheme: light;
+  --bg: #fbf7ef;  --bg-2: #f2ebdd;  --bg-3: #e7ddca;  --panel: #f7f1e5;
+  --edge: #d8cbb3;  --edge-soft: #e5dac6;
+  --ink: #2b241c;  --ink-dim: #5e5345;  --ink-faint: #85776a;
+  --accent: #9e3d18;  --accent-dim: #b84d24;  --on-accent: #fffaf5;
+  --good: #3a7d46;  --warn: #9c6a08;  --bad: #bf3a2b;
+  --shadow: rgba(60, 40, 20, .16);  --backdrop: rgba(60, 40, 20, .28);
+  --select: color-mix(in srgb, var(--accent) 20%, transparent);
+
+  --tag: #a3411b;  --attr: #7c479f;  --string: #587a1c;  --number: #a85f0a;
+  --keyword: #a5306a;  --comment: #948468;  --punct: #7a6d5a;
+  --prop: #2d6d72;  --value: #6b5810;  --selector: #8c5800;
+  --fn: #2e5d98;  --type: #2a775d;
+}
+
+[data-theme="frost"] {
+  color-scheme: light;
+  --bg: #f7fafc;  --bg-2: #ecf1f6;  --bg-3: #dfe7ef;  --panel: #f1f5f9;
+  --edge: #cbd5e1;  --edge-soft: #dbe3ec;
+  --ink: #16202d;  --ink-dim: #475569;  --ink-faint: #738196;
+  --accent: #086b79;  --accent-dim: #0b7d8d;  --on-accent: #ffffff;
+  --good: #15803d;  --warn: #9a6200;  --bad: #cf3a4b;
+  --shadow: rgba(20, 40, 70, .16);  --backdrop: rgba(20, 40, 70, .28);
+  --select: color-mix(in srgb, var(--accent) 22%, transparent);
+
+  --tag: #1d5fae;  --attr: #6b3fc4;  --string: #2f7a3b;  --number: #b45309;
+  --keyword: #be2a6a;  --comment: #78889c;  --punct: #64748b;
+  --prop: #0e7490;  --value: #5f6a00;  --selector: #985700;
+  --fn: #2560c2;  --type: #047a6a;
+}
+
+[data-theme="blossom"] {
+  color-scheme: light;
+  --bg: #fffafb;  --bg-2: #fbeef2;  --bg-3: #f2dfe5;  --panel: #fdf4f7;
+  --edge: #e6ccd5;  --edge-soft: #f0dbe2;
+  --ink: #2d1f26;  --ink-dim: #634a55;  --ink-faint: #8f7582;
+  --accent: #a8235a;  --accent-dim: #c4346d;  --on-accent: #ffffff;
+  --good: #2e7d5b;  --warn: #a06400;  --bad: #c8302f;
+  --shadow: rgba(80, 30, 50, .14);  --backdrop: rgba(80, 30, 50, .26);
+  --select: color-mix(in srgb, var(--accent) 20%, transparent);
+
+  --tag: #5a48c2;  --attr: #9c3a8c;  --string: #3f7a36;  --number: #b0590f;
+  --keyword: #bf2b67;  --comment: #988089;  --punct: #7d6670;
+  --prop: #1f777d;  --value: #7a5a0e;  --selector: #9e5009;
+  --fn: #3e5dbe;  --type: #2a776a;
+}
+
+[data-theme="meadow"] {
+  color-scheme: light;
+  --bg: #f8faf5;  --bg-2: #edf2e6;  --bg-3: #e1e8d6;  --panel: #f3f6ee;
+  --edge: #ccd6bf;  --edge-soft: #dce4d1;
+  --ink: #1e261c;  --ink-dim: #4a5744;  --ink-faint: #74826d;
+  --accent: #276b2b;  --accent-dim: #2f7d35;  --on-accent: #ffffff;
+  --good: #1c8560;  --warn: #956800;  --bad: #c03b32;
+  --shadow: rgba(30, 50, 20, .15);  --backdrop: rgba(30, 50, 20, .27);
+  --select: color-mix(in srgb, var(--accent) 22%, transparent);
+
+  --tag: #29679c;  --attr: #7848a2;  --string: #4c7812;  --number: #a35d10;
+  --keyword: #ae326c;  --comment: #7c8973;  --punct: #66715e;
+  --prop: #1b7770;  --value: #6a5f0e;  --selector: #885800;
+  --fn: #2e60a6;  --type: #19775c;
+}
+
+/* ── medium ───────────────────────────────────────────────────────────── */
+
+/* A mid-tone editor framed by darker bars. Next to a bright white page a
+   frame of mid grey fades into it; a darker one holds its own and keeps the
+   editor from looking washed out. The surfaces carry more colour than a
+   grey would, the separators are darker than what they separate, and the
+   syntax colours are clearer than pastels, for the same reason. */
+
+[data-theme="slate"] {
+  color-scheme: dark;
+  --bg: #353e4e;  --bg-2: #262d3a;  --bg-3: #414b5d;  --panel: #2d3543;
+  --edge: #1d232d;  --edge-soft: #2a3240;
+  --ink: #f6f8fb;  --ink-dim: #cdd5e1;  --ink-faint: #a3aec0;
+  --accent: #7fbfff;  --accent-dim: #2f6fc4;  --on-accent: #ffffff;
+  --good: #6fe0b4;  --warn: #ffc96b;  --bad: #ff8a92;
+  --shadow: rgba(6, 10, 16, .5);  --backdrop: rgba(6, 10, 16, .55);
+
+  --tag: #7cc4ff;  --attr: #d0a8ff;  --string: #b8e986;  --number: #ffbb80;
+  --keyword: #ff9ccc;  --comment: #9aa6b8;  --punct: #b8c2d0;
+  --prop: #6fe0d8;  --value: #eef0a8;  --selector: #ffd36e;
+  --fn: #94d0ff;  --type: #84ebc8;
+}
+
+[data-theme="dusk"] {
+  color-scheme: dark;
+  --bg: #3a3550;  --bg-2: #2a263b;  --bg-3: #4a4463;  --panel: #322d46;
+  --edge: #1f1c2c;  --edge-soft: #2e2a41;
+  --ink: #f7f4fc;  --ink-dim: #d4cce6;  --ink-faint: #aea4c6;
+  --accent: #c9a8ff;  --accent-dim: #6c4fc4;  --on-accent: #ffffff;
+  --good: #79e2b8;  --warn: #ffcb73;  --bad: #ff8fa0;
+  --shadow: rgba(10, 6, 18, .5);  --backdrop: rgba(10, 6, 18, .55);
+
+  --tag: #9cbcff;  --attr: #e6a8ff;  --string: #c2ea8e;  --number: #ffbe8c;
+  --keyword: #ff94cb;  --comment: #a49bbd;  --punct: #bcb3d0;
+  --prop: #7fe0da;  --value: #f0e6a6;  --selector: #ffd477;
+  --fn: #aac4ff;  --type: #8fe8cb;
+}
+
+[data-theme="moss"] {
+  color-scheme: dark;
+  --bg: #344338;  --bg-2: #263129;  --bg-3: #435548;  --panel: #2d3a31;
+  --edge: #1b231d;  --edge-soft: #2a362d;
+  --ink: #f3f7ef;  --ink-dim: #cdd8c6;  --ink-faint: #a6b49e;
+  --accent: #b8e67e;  --accent-dim: #4b8030;  --on-accent: #ffffff;
+  --good: #7fe0a8;  --warn: #f4cb68;  --bad: #ff8f86;
+  --shadow: rgba(6, 12, 8, .5);  --backdrop: rgba(6, 12, 8, .55);
+
+  --tag: #8fd0f5;  --attr: #dcb0f5;  --string: #cdeb86;  --number: #f8c27f;
+  --keyword: #f99cc4;  --comment: #9cab95;  --punct: #b6c2ae;
+  --prop: #7fe0c4;  --value: #ece7a0;  --selector: #f6d670;
+  --fn: #9ed4fb;  --type: #8eeac0;
+}
+
+[data-theme="clay"] {
+  color-scheme: dark;
+  --bg: #4b3a31;  --bg-2: #342821;  --bg-3: #5c483d;  --panel: #3f312a;
+  --edge: #261c17;  --edge-soft: #3a2d26;
+  --ink: #fbf4ee;  --ink-dim: #e3d2c5;  --ink-faint: #bba596;
+  --accent: #ffb07e;  --accent-dim: #ad4f26;  --on-accent: #ffffff;
+  --good: #86dca8;  --warn: #ffc864;  --bad: #ff8f84;
+  --shadow: rgba(16, 8, 4, .5);  --backdrop: rgba(16, 8, 4, .55);
+
+  --tag: #8fcaf5;  --attr: #e6acf2;  --string: #cfe688;  --number: #ffbf84;
+  --keyword: #ff9cbc;  --comment: #b29f91;  --punct: #c9b5a8;
+  --prop: #82dccb;  --value: #f3e1a3;  --selector: #ffd36f;
+  --fn: #a2d0f7;  --type: #93e3c0;
+}
+
+[data-theme="harbor"] {
+  color-scheme: dark;
+  --bg: #2c4449;  --bg-2: #1f3236;  --bg-3: #3a5559;  --panel: #263b40;
+  --edge: #152427;  --edge-soft: #22373b;
+  --ink: #f0f8f8;  --ink-dim: #c3d9da;  --ink-faint: #9ab5b7;
+  --accent: #6fe3d6;  --accent-dim: #17786f;  --on-accent: #ffffff;
+  --good: #74e4aa;  --warn: #f6c866;  --bad: #ff8a90;
+  --shadow: rgba(4, 12, 14, .5);  --backdrop: rgba(4, 12, 14, .55);
+
+  --tag: #80cdff;  --attr: #d4adff;  --string: #bde98a;  --number: #ffbf86;
+  --keyword: #ff97c2;  --comment: #93b0b2;  --punct: #aec7c8;
+  --prop: #74ead8;  --value: #e8eaa6;  --selector: #ffd572;
+  --fn: #98d6ff;  --type: #8af0cb;
+}
+
+/* With separators darker than the surfaces, the derived scrollbar would be
+   a dark thumb on a mid track; lighten it from the buttons instead. The
+   stage around a device-sized preview follows the bars. */
+[data-theme="slate"],
+[data-theme="dusk"],
+[data-theme="moss"],
+[data-theme="clay"],
+[data-theme="harbor"] {
+  --scroll: color-mix(in srgb, var(--bg-3), var(--ink) 12%);
+  --scroll-hover: color-mix(in srgb, var(--bg-3), var(--ink) 24%);
+  --stage: color-mix(in srgb, var(--bg-2), #000 20%);
+  --stage-check: color-mix(in srgb, var(--bg-2), #000 26%);
+}
+
+/* ── dark ─────────────────────────────────────────────────────────────── */
+
+[data-theme="ember"] {
+  color-scheme: dark;
+  --bg: #1a1512;  --bg-2: #211b17;  --bg-3: #2a221d;  --panel: #1e1915;
+  --edge: #3b3029;  --edge-soft: #2f2620;
+  --ink: #f0e6dc;  --ink-dim: #b8a796;  --ink-faint: #87786b;
+  --accent: #ff9a52;  --accent-dim: #b0501b;  --on-accent: #fff7f0;
+  --good: #9ad38a;  --warn: #f2be5c;  --bad: #ff6b6b;
+  --shadow: rgba(0, 0, 0, .55);  --backdrop: rgba(0, 0, 0, .6);
+
+  --tag: #ffad6b;  --attr: #e5a3d6;  --string: #c9d98c;  --number: #ff9b85;
+  --keyword: #ff7f8f;  --comment: #7d6d60;  --punct: #a08f80;
+  --prop: #7fd0c0;  --value: #f2e3b3;  --selector: #ffcf70;
+  --fn: #8fc7e8;  --type: #a8d8b0;
+}
+
+[data-theme="deep-sea"] {
+  color-scheme: dark;
+  --bg: #0b1220;  --bg-2: #0f1829;  --bg-3: #152036;  --panel: #0d1525;
+  --edge: #1f2d47;  --edge-soft: #18243a;
+  --ink: #d8e4f5;  --ink-dim: #8fa3c0;  --ink-faint: #62769a;
+  --accent: #39c5ff;  --accent-dim: #1767a8;  --on-accent: #eef8ff;
+  --good: #4fd6a4;  --warn: #f2c063;  --bad: #ff6b81;
+  --shadow: rgba(0, 4, 12, .6);  --backdrop: rgba(0, 4, 12, .6);
+
+  --tag: #6cc4ff;  --attr: #b49cff;  --string: #8fdcaa;  --number: #ffb38a;
+  --keyword: #ff7ab8;  --comment: #5a6d90;  --punct: #7487a6;
+  --prop: #5fe0e0;  --value: #c4dba0;  --selector: #ffd27a;
+  --fn: #7fb4ff;  --type: #6fe3c0;
+}
+
+[data-theme="forest"] {
+  color-scheme: dark;
+  --bg: #101611;  --bg-2: #141b15;  --bg-3: #1b241c;  --panel: #121913;
+  --edge: #273428;  --edge-soft: #1f2a21;
+  --ink: #dde9d8;  --ink-dim: #9db197;  --ink-faint: #6f836a;
+  --accent: #9be36b;  --accent-dim: #3c7528;  --on-accent: #f2ffe9;
+  --good: #6fd99a;  --warn: #e8c060;  --bad: #ff7a72;
+  --shadow: rgba(0, 0, 0, .55);  --backdrop: rgba(0, 0, 0, .6);
+
+  --tag: #7cc8e8;  --attr: #c9a6e8;  --string: #b6dd7a;  --number: #f0b878;
+  --keyword: #f08ab0;  --comment: #627a5c;  --punct: #849880;
+  --prop: #7ddfc0;  --value: #e0e3a2;  --selector: #f2d27a;
+  --fn: #9cc9f0;  --type: #8de6c5;
+}
+
+[data-theme="plum"] {
+  color-scheme: dark;
+  --bg: #19131f;  --bg-2: #1f1826;  --bg-3: #271e30;  --panel: #1c1623;
+  --edge: #392c45;  --edge-soft: #2e2339;
+  --ink: #ece2f3;  --ink-dim: #ae9ebd;  --ink-faint: #806f91;
+  --accent: #ff7ac8;  --accent-dim: #9c3880;  --on-accent: #ffffff;
+  --good: #6fd8b0;  --warn: #f0c46a;  --bad: #ff6b7f;
+  --shadow: rgba(0, 0, 0, .55);  --backdrop: rgba(6, 0, 10, .6);
+
+  --tag: #8ab4ff;  --attr: #d7a2ff;  --string: #b4e0a0;  --number: #ffb48a;
+  --keyword: #ff7ac8;  --comment: #7b6a8c;  --punct: #9686a6;
+  --prop: #7fdcd6;  --value: #e6d9a8;  --selector: #ffd27f;
+  --fn: #a5c2ff;  --type: #92e0c8;
+}
+
+/* Near-black for OLED screens. The only theme whose buttons carry dark text:
+   amber is too light a fill for white. */
+[data-theme="carbon"] {
+  color-scheme: dark;
+  --bg: #0a0a0a;  --bg-2: #111111;  --bg-3: #1a1a1a;  --panel: #0e0e0e;
+  --edge: #2a2a2a;  --edge-soft: #1f1f1f;
+  --ink: #e8e8e8;  --ink-dim: #a3a3a3;  --ink-faint: #767676;
+  --accent: #ffc23d;  --accent-dim: #e0a82e;  --on-accent: #141414;
+  --good: #6fd89a;  --warn: #ff9f43;  --bad: #ff5f5f;
+  --shadow: rgba(0, 0, 0, .7);  --backdrop: rgba(0, 0, 0, .65);
+  --select: color-mix(in srgb, var(--accent) 24%, transparent);
+
+  --tag: #7ab8ff;  --attr: #c59bff;  --string: #a5d98a;  --number: #ffa86b;
+  --keyword: #ff7096;  --comment: #6e6e6e;  --punct: #8c8c8c;
+  --prop: #6fd6d0;  --value: #dcdca0;  --selector: #ffc23d;
+  --fn: #8cc4ff;  --type: #7fe0b8;
+}
